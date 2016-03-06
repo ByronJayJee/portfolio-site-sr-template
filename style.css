@@ -95,6 +95,9 @@ body {
 	transform: translate3d(0, 25%, 0);
 }
 
+.closed {
+  height: 0vh !important; 
+}
 .opened {
   height: 100vh !important;
   top: 0vh !important;
@@ -102,11 +105,14 @@ body {
 }
 
 .header-wrapper {
+  background-color: white;
   overflow: hidden;
   height: 50px;
   width: 100%;
-  position: relative;
+
+  position: fixed;
   top: calc(100vh - 50px);
+
 /* 
   This should be implented in SASS or LESS. 
   That way all the browser specific transitions would be injected
@@ -136,6 +142,30 @@ body {
   padding-left: 75px;
   padding-right: 75px;
   overflow: overlay;
+}
+
+
+.carousel {
+/* 
+  This should be implented in SASS or LESS. 
+  That way all the browser specific transitions would be injected
+*/
+  -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
+
+.carousel-inner > .item > img{
+  max-height: calc(100vh - 50px);
+  max-width: calc(100vw - 50px);
+  height:auto;
+  width:auto;
+  margin: 0 auto;
+}
+
+.carousel-control {
+  background: white !important;
+  color: #000 !important;
 }
 
 .bioDiv {

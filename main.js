@@ -7,6 +7,7 @@
 
   $( "#hTog" ).click(function() {
     $( "#hWrap" ).toggleClass( "opened" );
+    //$( "#carousel-example-generic" ).toggleClass( "closed" );
     //$( "#nav" ).toggleClass( "fixed" );
   });
 
