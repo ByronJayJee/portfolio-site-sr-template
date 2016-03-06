@@ -10,10 +10,28 @@ body {
   /* background-color: #1C1D1F; */
 }
 
+.navbar.fixed {
+  position: fixed;
+  top: 0px;
+/* 
+  This should be implented in SASS or LESS. 
+  That way all the browser specific transitions would be injected
+*/
+  -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
 .navbar {
   border: 0px;
   margin: 0px;
   border-radius: 0px;
+  width: 100%;
+/* 
+  This should be implented in SASS or LESS. 
+  That way all the browser specific transitions would be injected
+*/
+  -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
 }
 
 .navbar > .container {
@@ -80,9 +98,11 @@ body {
 .opened {
   height: 100vh !important;
   top: 0vh !important;
+  /* overflow: visible !important; */
 }
 
 .header-wrapper {
+  overflow: hidden;
   height: 50px;
   width: 100%;
   position: relative;
@@ -112,9 +132,10 @@ body {
 
 .portfolioContainer {
   /* margin:0px; */
-  padding:0px;
-  margin-left: 75px;
-  margin-right: 75px;
+  height: calc(100vh - 50px);
+  padding-left: 75px;
+  padding-right: 75px;
+  overflow: overlay;
 }
 
 .bioDiv {
@@ -126,6 +147,11 @@ body {
 
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.big-body {
+  height: calc(100vh - 50px);
+  overflow: overlay;
 }
 
 #div1 {

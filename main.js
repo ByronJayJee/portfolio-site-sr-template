@@ -7,6 +7,8 @@
 
   $( "#hTog" ).click(function() {
     $( "#hWrap" ).toggleClass( "opened" );
+    //$( "#nav" ).toggleClass( "fixed" );
   });
+
 
 })(jQuery); // End of use strict
