@@ -146,6 +146,7 @@ body {
 
 
 .carousel {
+  margin-top: 50px;
 /* 
   This should be implented in SASS or LESS. 
   That way all the browser specific transitions would be injected
@@ -156,8 +157,8 @@ body {
 
 
 .carousel-inner > .item > img{
-  max-height: calc(100vh - 50px);
-  max-width: calc(100vw - 50px);
+  max-height: calc(100vh - 150px);
+  max-width: calc(100vw - 100px);
   height:auto;
   width:auto;
   margin: 0 auto;
