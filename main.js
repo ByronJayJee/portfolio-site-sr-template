@@ -5,4 +5,8 @@
   if (location.hash) shiftWindow();
   window.addEventListener("hashchange", shiftWindow);
 
+  $( "#hTog" ).click(function() {
+    $( "#hWrap" ).toggleClass( "opened" );
+  });
+
 })(jQuery); // End of use strict

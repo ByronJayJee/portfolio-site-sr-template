@@ -10,6 +10,12 @@ body {
   /* background-color: #1C1D1F; */
 }
 
+.navbar {
+  border: 0px;
+  margin: 0px;
+  border-radius: 0px;
+}
+
 .navbar > .container {
   width: 100%;
 }
@@ -50,6 +56,10 @@ body {
   border: 0px;
 }
 
+/* 
+  This should be implented in SASS or LESS. 
+  That way all the browser specific translate3d would be injected
+*/
 .modal.fade:not(.in).top .modal-dialog {
 	-webkit-transform: translate3d(0, -25%, 0);
 	transform: translate3d(0, -25%, 0);
@@ -67,6 +77,23 @@ body {
 	transform: translate3d(0, 25%, 0);
 }
 
+.opened {
+  height: 100vh !important;
+  top: 0vh !important;
+}
+
+.header-wrapper {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  top: calc(100vh - 50px);
+/* 
+  This should be implented in SASS or LESS. 
+  That way all the browser specific transitions would be injected
+*/
+  -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
 .gallery-item {
   height:100%;
   width:auto;
@@ -103,6 +130,11 @@ body {
 
 #div1 {
   background-color:red;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 #div2 {
